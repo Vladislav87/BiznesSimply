@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		DFB297341E0D505C001B755A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297331E0D505C001B755A /* AppDelegate.swift */; };
-		DFB297361E0D505C001B755A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297351E0D505C001B755A /* ViewController.swift */; };
 		DFB297391E0D505C001B755A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB297371E0D505C001B755A /* Main.storyboard */; };
 		DFB2973C1E0D505C001B755A /* SimplifyingBusiness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFB2973A1E0D505C001B755A /* SimplifyingBusiness.xcdatamodeld */; };
 		DFB2973E1E0D505C001B755A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB2973D1E0D505C001B755A /* Assets.xcassets */; };
 		DFB297411E0D505C001B755A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB2973F1E0D505C001B755A /* LaunchScreen.storyboard */; };
+		DFB297511E0E6C40001B755A /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297501E0E6C40001B755A /* Manager.swift */; };
+		DFB297531E0E71D1001B755A /* ClientsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297521E0E71D1001B755A /* ClientsTable.swift */; };
+		DFB297551E0E748D001B755A /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297541E0E748D001B755A /* ClientView.swift */; };
+		DFB2975A1E0E7795001B755A /* MyClients+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297561E0E7795001B755A /* MyClients+CoreDataProperties.swift */; };
+		DFB2975B1E0E7795001B755A /* MyClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297571E0E7795001B755A /* MyClients.swift */; };
+		DFB2975C1E0E7795001B755A /* MyServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297581E0E7795001B755A /* MyServices+CoreDataProperties.swift */; };
+		DFB2975D1E0E7795001B755A /* MyServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297591E0E7795001B755A /* MyServices.swift */; };
+		DFB2975F1E0E804D001B755A /* ServiceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2975E1E0E804D001B755A /* ServiceTable.swift */; };
+		DFB297611E0E81F9001B755A /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297601E0E81F9001B755A /* ServiceView.swift */; };
+		DFB297631E0E8D12001B755A /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB297621E0E8D12001B755A /* Calculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFB297301E0D505C001B755A /* SimplifyingBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplifyingBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB297331E0D505C001B755A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFB297351E0D505C001B755A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DFB297381E0D505C001B755A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFB2973B1E0D505C001B755A /* SimplifyingBusiness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimplifyingBusiness.xcdatamodel; sourceTree = "<group>"; };
 		DFB2973D1E0D505C001B755A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFB297401E0D505C001B755A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFB297421E0D505C001B755A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFB297501E0E6C40001B755A /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		DFB297521E0E71D1001B755A /* ClientsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientsTable.swift; path = ../ClientsTable.swift; sourceTree = "<group>"; };
+		DFB297541E0E748D001B755A /* ClientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientView.swift; path = ../ClientView.swift; sourceTree = "<group>"; };
+		DFB297561E0E7795001B755A /* MyClients+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyClients+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFB297571E0E7795001B755A /* MyClients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClients.swift; sourceTree = "<group>"; };
+		DFB297581E0E7795001B755A /* MyServices+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFB297591E0E7795001B755A /* MyServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServices.swift; sourceTree = "<group>"; };
+		DFB2975E1E0E804D001B755A /* ServiceTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceTable.swift; path = ../ServiceTable.swift; sourceTree = "<group>"; };
+		DFB297601E0E81F9001B755A /* ServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceView.swift; path = ../ServiceView.swift; sourceTree = "<group>"; };
+		DFB297621E0E8D12001B755A /* Calculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calculation.swift; path = ../Calculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,11 @@
 		DFB297271E0D505C001B755A = {
 			isa = PBXGroup;
 			children = (
+				DFB297561E0E7795001B755A /* MyClients+CoreDataProperties.swift */,
+				DFB297571E0E7795001B755A /* MyClients.swift */,
+				DFB297581E0E7795001B755A /* MyServices+CoreDataProperties.swift */,
+				DFB297591E0E7795001B755A /* MyServices.swift */,
+				DFB297501E0E6C40001B755A /* Manager.swift */,
 				DFB297321E0D505C001B755A /* SimplifyingBusiness */,
 				DFB297311E0D505C001B755A /* Products */,
 			);
@@ -56,8 +79,12 @@
 		DFB297321E0D505C001B755A /* SimplifyingBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				DFB297521E0E71D1001B755A /* ClientsTable.swift */,
+				DFB297541E0E748D001B755A /* ClientView.swift */,
+				DFB2975E1E0E804D001B755A /* ServiceTable.swift */,
+				DFB297601E0E81F9001B755A /* ServiceView.swift */,
+				DFB297621E0E8D12001B755A /* Calculation.swift */,
 				DFB297331E0D505C001B755A /* AppDelegate.swift */,
-				DFB297351E0D505C001B755A /* ViewController.swift */,
 				DFB297371E0D505C001B755A /* Main.storyboard */,
 				DFB2973D1E0D505C001B755A /* Assets.xcassets */,
 				DFB2973F1E0D505C001B755A /* LaunchScreen.storyboard */,
@@ -94,11 +121,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Vlad Samoilov";
 				TargetAttributes = {
 					DFB2972F1E0D505C001B755A = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = VBGF6K57D6;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -138,9 +167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB2975F1E0E804D001B755A /* ServiceTable.swift in Sources */,
+				DFB297611E0E81F9001B755A /* ServiceView.swift in Sources */,
 				DFB2973C1E0D505C001B755A /* SimplifyingBusiness.xcdatamodeld in Sources */,
-				DFB297361E0D505C001B755A /* ViewController.swift in Sources */,
+				DFB297511E0E6C40001B755A /* Manager.swift in Sources */,
 				DFB297341E0D505C001B755A /* AppDelegate.swift in Sources */,
+				DFB2975C1E0E7795001B755A /* MyServices+CoreDataProperties.swift in Sources */,
+				DFB2975B1E0E7795001B755A /* MyClients.swift in Sources */,
+				DFB297631E0E8D12001B755A /* Calculation.swift in Sources */,
+				DFB297531E0E71D1001B755A /* ClientsTable.swift in Sources */,
+				DFB2975A1E0E7795001B755A /* MyClients+CoreDataProperties.swift in Sources */,
+				DFB297551E0E748D001B755A /* ClientView.swift in Sources */,
+				DFB2975D1E0E7795001B755A /* MyServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +217,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -223,8 +263,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -243,6 +285,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -251,10 +294,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VBGF6K57D6;
 				INFOPLIST_FILE = SimplifyingBusiness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VS.SimplifyingBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,10 +307,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VBGF6K57D6;
 				INFOPLIST_FILE = SimplifyingBusiness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VS.SimplifyingBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -288,6 +335,7 @@
 				DFB297471E0D505C001B755A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

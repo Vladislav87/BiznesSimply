@@ -1,25 +1,333 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="sZF-fq-nDP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Меню-->
+        <scene sceneID="0FK-rR-PqI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="yNb-au-nrC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vRJ-ex-EIF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WQl-KH-mQu">
+                                <rect key="frame" x="23" y="139" width="328" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Мои клиенты"/>
+                                <connections>
+                                    <segue destination="haY-nJ-eUg" kind="push" id="bPg-5P-hLo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="D9G-Ds-awb">
+                                <rect key="frame" x="23" y="201" width="328" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Мои услуги"/>
+                                <connections>
+                                    <segue destination="fY1-sp-eNT" kind="push" id="iFt-7D-c9d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Меню" id="Klw-LQ-fVf"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nff-Qb-9jN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1414" y="179"/>
+        </scene>
+        <!--Мои услуги-->
+        <scene sceneID="I9k-uh-sJg">
+            <objects>
+                <tableViewController id="fY1-sp-eNT" customClass="ServiceTable" customModule="SimplifyingBusiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XJo-0o-EIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fY1-sp-eNT" id="gZg-og-Evc"/>
+                            <outlet property="delegate" destination="fY1-sp-eNT" id="bnr-zz-vGt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои услуги" id="pEb-Qv-ar1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="S66-CX-e3c">
+                            <connections>
+                                <action selector="AddService:" destination="fY1-sp-eNT" id="feV-1E-wKQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="h8v-ka-lKz" kind="modal" identifier="servicesToService" id="N7U-wu-Rfs"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3I-A7-5ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="1065"/>
+        </scene>
+        <!-- Услуга-->
+        <scene sceneID="NsL-oM-MxT">
+            <objects>
+                <viewController id="h8v-ka-lKz" customClass="ServiceView" customModule="SimplifyingBusiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJ3-Ph-ZeN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Услуга" textAlignment="natural" minimumFontSize="17" id="Ql0-xs-OjB">
+                                <rect key="frame" x="23" y="114" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Стоимость" textAlignment="natural" minimumFontSize="17" id="pf6-8Q-QOl">
+                                <rect key="frame" x="23" y="159" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Специалист" textAlignment="natural" minimumFontSize="17" id="Fwb-oJ-R3M">
+                                <rect key="frame" x="23" y="204" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" id="15F-So-9e1">
+                                <rect key="frame" x="0.0" y="18" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Услуга" id="d5q-yN-6VG">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUC-os-hor">
+                                            <connections>
+                                                <action selector="cancel:" destination="h8v-ka-lKz" id="b7u-s5-Ind"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mfq-3K-Uol">
+                                            <connections>
+                                                <action selector="save:" destination="h8v-ka-lKz" id="wvW-p2-Sm6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V1e-Ad-eUm">
+                                <rect key="frame" x="268" y="201" width="78" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Выбрать"/>
+                                <connections>
+                                    <action selector="changeSalesManager:" destination="h8v-ka-lKz" eventType="touchUpInside" id="NBV-Lb-ICm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ptt-HP-aeJ">
+                                <rect key="frame" x="22" y="614" width="329" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Отправить рассчет клиенту по емейл?"/>
+                                <connections>
+                                    <action selector="sendEmail:" destination="h8v-ka-lKz" eventType="touchUpInside" id="HEZ-AU-sqd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Об услуге:" textAlignment="natural" id="nPZ-7L-56G">
+                                <rect key="frame" x="23" y="459" width="328" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Затрачено часов" textAlignment="natural" minimumFontSize="17" id="WZf-T4-g95">
+                                <rect key="frame" x="23" y="302" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Рассчет стоимости услуги" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cCj-8m-L3N">
+                                <rect key="frame" x="23" y="242" width="323" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Стоимость часа работы" textAlignment="natural" minimumFontSize="17" id="uMe-xY-Web">
+                                <rect key="frame" x="23" y="340" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NMG-Cf-Ra0">
+                                <rect key="frame" x="151" y="378" width="88" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Посчитать"/>
+                                <connections>
+                                    <action selector="calculateService:" destination="h8v-ka-lKz" eventType="touchUpInside" id="4uI-mq-aFp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" Услуга" id="Az5-dV-Ibx">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rkf-0U-jyI">
+                            <connections>
+                                <action selector="cancel:" destination="h8v-ka-lKz" id="hAj-fz-QQz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="SxX-H1-jyS">
+                            <connections>
+                                <action selector="save:" destination="h8v-ka-lKz" id="vAS-MU-TNh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutService" destination="nPZ-7L-56G" id="iGH-DB-FHW"/>
+                        <outlet property="costField" destination="pf6-8Q-QOl" id="zcG-Yr-qmk"/>
+                        <outlet property="costOfHour" destination="uMe-xY-Web" id="fV2-Fb-JQn"/>
+                        <outlet property="hour" destination="WZf-T4-g95" id="Hzc-7W-32t"/>
+                        <outlet property="name" destination="Ql0-xs-OjB" id="QI9-kC-gfq"/>
+                        <outlet property="salesName" destination="Fwb-oJ-R3M" id="i80-kx-Uli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYr-Qw-AEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.5" y="1055.5"/>
+        </scene>
+        <!--Мои клиенты-->
+        <scene sceneID="Jfi-LQ-9p9">
+            <objects>
+                <tableViewController id="haY-nJ-eUg" customClass="ClientsTable" customModule="SimplifyingBusiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Syi-1r-1gL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="haY-nJ-eUg" id="wbc-7f-fqh"/>
+                            <outlet property="delegate" destination="haY-nJ-eUg" id="iON-x2-MSw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои клиенты" id="Paz-b5-Uca">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nr1-v4-uFg">
+                            <connections>
+                                <action selector="addNewClient:" destination="haY-nJ-eUg" id="dta-Yx-2kk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="twE-jC-XWv" kind="modal" identifier="clientsToClient" id="9PE-Q3-gS7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENA-Ic-fSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="179"/>
+        </scene>
+        <!--Карточка клиента-->
+        <scene sceneID="Meh-nn-DiY">
+            <objects>
+                <viewController id="twE-jC-XWv" customClass="ClientView" customModule="SimplifyingBusiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bzR-vW-Afp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название компании" textAlignment="natural" minimumFontSize="17" id="Uzq-Sc-0oR">
+                                <rect key="frame" x="17" y="104" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ИИН" textAlignment="natural" minimumFontSize="17" id="FeA-yZ-czX">
+                                <rect key="frame" x="17" y="149" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сайт" textAlignment="natural" minimumFontSize="17" id="gE5-Xh-hSU">
+                                <rect key="frame" x="17" y="194" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="телефон" textAlignment="natural" minimumFontSize="17" id="Uox-i8-1fA">
+                                <rect key="frame" x="17" y="239" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Вид деятельности,дополнительная информация, история переписки" textAlignment="natural" id="eF4-Qn-dre">
+                                <rect key="frame" x="17" y="287" width="334" height="297"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" id="q6G-yi-P4q">
+                                <rect key="frame" x="0.0" y="15" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Карточка клиента" id="NOx-r7-exw">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gWK-b1-zK6">
+                                            <connections>
+                                                <action selector="cancel:" destination="twE-jC-XWv" id="9G9-ga-8YI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xje-h5-GZF">
+                                            <connections>
+                                                <action selector="saveNewClient:" destination="twE-jC-XWv" id="BkV-wr-0l0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Карточка клиента" id="u9J-rZ-0hC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="x7t-s3-Uci">
+                            <connections>
+                                <action selector="cancel:" destination="twE-jC-XWv" id="bpd-ty-kBc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="j7k-fj-dPA">
+                            <connections>
+                                <action selector="saveNewClient:" destination="twE-jC-XWv" id="LUq-un-e9U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="iinField" destination="FeA-yZ-czX" id="Up3-HN-F5a"/>
+                        <outlet property="infoText" destination="eF4-Qn-dre" id="E3Y-aK-k1X"/>
+                        <outlet property="nameClientField" destination="Uzq-Sc-0oR" id="toD-hw-ngh"/>
+                        <outlet property="phoneField" destination="Uox-i8-1fA" id="Y0b-1O-afb"/>
+                        <outlet property="siteField" destination="gE5-Xh-hSU" id="gHd-RB-04J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7v-RJ-C9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2231" y="185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="69y-ie-ivy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sZF-fq-nDP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CMt-LE-Ffv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yNb-au-nrC" kind="relationship" relationship="rootViewController" id="9ek-rI-GPM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Opq-XX-N6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="179"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>
