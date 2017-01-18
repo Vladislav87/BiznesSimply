@@ -24,9 +24,17 @@ class ServiceTable: UITableViewController,NSFetchedResultsControllerDelegate {
         }
       
     }
+    
+    
+    // MARK: - Navigation this controller: add or cancel and back to menu.
 
     @IBAction func AddService(_ sender: AnyObject) {
         performSegue(withIdentifier: "servicesToService", sender: nil)
+    }
+    @IBAction func cancel(_ sender: AnyObject){
+        
+        dismiss(animated: true, completion: nil)
+        
     }
 
     // MARK: - Table View Data Source

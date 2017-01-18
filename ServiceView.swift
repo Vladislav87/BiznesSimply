@@ -25,15 +25,14 @@ class ServiceView: UIViewController,MFMailComposeViewControllerDelegate {
     
     
     
-    //КНОПКА "ПОСЧИТАТЬ"
     @IBAction func calculateService(_ sender: AnyObject){
         let myCalculate = Calculation()
         
         
-        self.resultCost = myCalculate.Count(hour.text!, costOfHour: costOfHour.text!)
-        costField.text = resultCost
+        self.costString = myCalculate.Count(hour.text!, costOfHour: costOfHour.text!)
+        costField.text = costString
+        resultCost = costString
         
-      costString = resultCost
         
         
     }
@@ -120,11 +119,11 @@ class ServiceView: UIViewController,MFMailComposeViewControllerDelegate {
     }
     
    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.costField.text = costString
-
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.costField.text = costString
+//
+//    }
     
     
     func saveService() -> Bool {
@@ -149,7 +148,6 @@ class ServiceView: UIViewController,MFMailComposeViewControllerDelegate {
             service.about = aboutService.text
             service.nameSalesManager = salesName.text
             service.cost = costField.text
-            service.cost = costString
             
             Manager.instance.saveContext()
         }

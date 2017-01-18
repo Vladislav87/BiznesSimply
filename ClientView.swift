@@ -23,6 +23,8 @@ class ClientView: UIViewController {
     
     @IBOutlet weak var infoText: UITextView!
     
+    @IBOutlet weak var ringingButton: UIButton!
+    
     
 
     override func viewDidLoad() {
@@ -37,13 +39,29 @@ class ClientView: UIViewController {
 
             
         }
+        
+        ringingButton.layer.cornerRadius = ringingButton.frame.width/2
+        ringingButton.clipsToBounds = true
+        ringingButton.layer.borderColor = UIColor.green.cgColor
+        ringingButton.layer.borderWidth = 2
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func callNumber(_ sender: AnyObject){
+        callToClient(phoneNumb: phoneField.text!)
+    }
+    
+    func callToClient(phoneNumb: String){
+        if let url = URL(string: "tel://\(phoneNumb)"){
+            if #available(iOS 10, *){
+                UIApplication.shared.open(url, options:[:], completionHandler: { (success) in
+                    print(success)
+                })
+            }else {
+                let success = UIApplication.shared.openURL(url)
+                print(success)
+            }
+        }
     }
     
 

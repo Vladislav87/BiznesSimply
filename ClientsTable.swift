@@ -12,7 +12,9 @@ import CoreData
 class ClientsTable: UITableViewController,NSFetchedResultsControllerDelegate {
     
     
-
+   
+    
+    
 
     var fetchedResultsController = Manager.instance.fetchedResultsController("MyClients", keyForSort: "name")
     
@@ -50,11 +52,17 @@ class ClientsTable: UITableViewController,NSFetchedResultsControllerDelegate {
         cell.textLabel?.text = customer.name
         return cell
     }
-    
+    //MARK: - navigations action: add or cancel
     @IBAction  func addNewClient(_ sender:AnyObject){
         performSegue(withIdentifier: "clientsToClient", sender: nil)
 
     }
+    
+    @IBAction func cancel(_ sender: AnyObject){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let customer = fetchedResultsController.object(at: indexPath) as? MyClients
         performSegue(withIdentifier: "clientsToClient", sender: customer)
